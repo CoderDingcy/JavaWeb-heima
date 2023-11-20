@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue-指令</title>
+    <!-- 第一步引入js文件 -->
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <!-- 第三步定义视图 -->
+    <div id="app">
+        <a v-bind:href="url" target="_blank">链接1</a>
+        <!-- 简化书写形式:<a :href="url">链接1</a> -->
+
+        <!-- v-model是用来绑定表单元素的 -->
+        <input type="text" v-model="url">
+
+    </div>
+
+</body>
+<script>
+    // 第二步创建vue对象
+    new Vue({
+        el: "#app",
+        data: {
+            url: "https://www.baidu.com"
+        }
+
+
+    })
+</script>
+
+</html>
